@@ -1,0 +1,36 @@
+﻿<Window x:Class="FileManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileManager"
+        mc:Ignorable="d"
+        Title="File Manager" Height="577.802" Width="912.102">
+    <Grid>
+        <ScrollViewer HorizontalAlignment="Left" Height="430" Margin="10,108,0,0" VerticalAlignment="Top" Width="428">
+            <StackPanel Name="leftList"/>
+        </ScrollViewer>
+        <ScrollViewer HorizontalAlignment="Left" Height="430" Margin="466,108,0,0" VerticalAlignment="Top" Width="428">
+            <StackPanel Name="rightList"/>
+        </ScrollViewer>
+        <Button x:Name="sortByNameLeft" Content="Nazwa" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="144" Height="27" Click="sortByNameLeft_Click"/>
+        <Button x:Name="sortByCreationTimeLeft" Content="Data utworzenia" HorizontalAlignment="Left" Margin="159,76,0,0" VerticalAlignment="Top" Width="171" Height="27" Click="sortByCreationTimeLeft_Click"/>
+        <Button x:Name="sortByNameRight" Content="Nazwa" HorizontalAlignment="Left" Margin="483,76,0,0" VerticalAlignment="Top" Width="148" Height="26" Click="sortByNameRight_Click"/>
+        <Button x:Name="sortByCreationTimeRight" Content="Data utworzenia" HorizontalAlignment="Left" Margin="636,76,0,0" VerticalAlignment="Top" Width="169" Height="26" Click="sortByCreationTimeRight_Click"/>
+        <ComboBox x:Name="discLeft" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="59" SelectionChanged="discLeft_SelectionChanged"/>
+        <ComboBox x:Name="discRight" HorizontalAlignment="Left" Margin="483,10,0,0" VerticalAlignment="Top" Width="59" SelectionChanged="discRight_SelectionChanged"/>
+        <Button x:Name="backLeft" Content="&lt;- " HorizontalAlignment="Left" Margin="335,76,0,0" VerticalAlignment="Top" Width="103" Height="26" Click="backLeft_Click"/>
+        <Button x:Name="backRight" Content="&lt;-" HorizontalAlignment="Left" Margin="810,76,0,0" VerticalAlignment="Top" Width="84" Height="26" RenderTransformOrigin="0.536,0.571" Click="backRight_Click"/>
+        <Button x:Name="createDirectoryLeft" Content="Stwórz folder" HorizontalAlignment="Left" Margin="314,9,0,0" VerticalAlignment="Top" Width="79" Click="createDirectoryLeft_Click"/>
+        <Button x:Name="createDirectoryRight" Content="Stwórz folder" HorizontalAlignment="Left" Margin="794,10,0,0" VerticalAlignment="Top" Width="75" Click="createDirectoryRight_Click"/>
+        <TextBox x:Name="newLeftDirectoryName" HorizontalAlignment="Left" Height="23" Margin="189,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="newRightDirectoryName" HorizontalAlignment="Left" Height="23" Margin="669,9,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="copyLeft" Content="Kopiuj" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="59" Height="21" Click="copyLeft_Click"/>
+        <Button x:Name="copyRight" Content="Kopiuj" HorizontalAlignment="Left" Margin="483,42,0,0" VerticalAlignment="Top" Width="59" Height="23" Click="copyRight_Click"/>
+        <TextBox x:Name="searchValueLeft" HorizontalAlignment="Left" Height="23" Margin="189,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="searchLeft" Content="Szukaj" HorizontalAlignment="Left" Margin="314,43,0,0" VerticalAlignment="Top" Width="79" Click="searchLeft_Click"/>
+        <TextBox x:Name="searchValueRight" HorizontalAlignment="Left" Height="23" Margin="669,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="searchRight" Content="Szukaj" HorizontalAlignment="Left" Margin="794,46,0,0" VerticalAlignment="Top" Width="75" Click="searchRight_Click"/>
+
+    </Grid>
+</Window>
